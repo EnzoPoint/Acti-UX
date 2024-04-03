@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build"
   },
   "dependencies": {
     "@fontsource/josefin-sans": "^5.0.18",
@@ -57,6 +59,7 @@
   },
   "devDependencies": {
     "@types/got": "^9.6.12",
-    "@types/smoothscroll-polyfill": "^0.3.1"
+    "@types/smoothscroll-polyfill": "^0.3.1",
+    "gh-pages": "^6.1.1"
   }
 }
