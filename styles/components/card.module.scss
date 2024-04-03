@@ -1,0 +1,75 @@
+@import "@styles/base/_reset.scss";
+@import "@styles/base/_mixins.scss";
+@import "@styles/base/_typography.scss";
+@import "@styles/abstracts/_colors.module.scss";
+
+.card {
+    background-color: $white;
+    @include flex-container(column, nowrap);
+    box-shadow: 2px 1px 15px $grey;
+    margin: 0;
+    border-radius: 15px;
+}
+
+.image { 
+    border-radius: 15px 15px 0px 0px;
+    width: 100%;
+}
+
+.texte {
+    padding: 0px 2vw 2vw 2vw;
+}  
+
+.small {
+    width: calc(20% - 22px);
+    height: 300px;
+
+    .texte {
+        p {
+            position: relative;
+            height: 100px;
+            overflow: hidden;
+            text-overflow: ellipsis
+        }
+
+        p::after {
+            content: "→";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 0 20px 1px 45px;
+            background: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1) 50%);
+        }
+    }
+
+    @media (max-width: 768px) {
+        width: calc((100%/3) - 22px);
+        height: 25vh;
+    }
+}
+
+.big {
+
+    width: calc(50% - 30px);
+    
+    .image { 
+        height: 200px;
+    }
+
+    @media (max-width: 768px) {
+        width: calc(25% - 30px);
+        height: 25vh;
+    }
+}
+
+.huge {
+    width: calc(100% - 30px);
+
+    .image { 
+        height: 256px;
+    }
+    @media (max-width: 768px) {
+        width: calc(25% - 30px);
+        height: 25vh;
+    }
+}

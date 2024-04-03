@@ -1,0 +1,57 @@
+@import "@styles/base/_reset.scss";
+@import "@styles/base/_mixins.scss";
+@import "@styles/base/_typography.scss";
+@import "@styles/abstracts/_colors.module.scss";
+@import "@styles/abstracts/_variables.module.scss";
+
+
+
+#main {
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.container {
+    background-color: $primary;
+    border-radius: 6px;
+    height: 964px;
+    width: 90vw;;
+}
+
+.copyright {
+    z-index: 1000;
+}
+
+.footer {
+    background-color: $primary;
+    border-radius: 6px;
+    height: 100px;
+    width: 100%;
+
+    p {
+        color: $white;
+        text-align: center;
+    }
+}
+
+.mouseImage {
+    pointer-events: none;
+    position: fixed;
+    width: 400px; 
+    height: 400px;
+    z-index: 1000;
+    transition: top 0.1s, left 0.1s;
+}
+  
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .mouseImage {
+      animation: rotate 12s linear infinite;
+  }
+  

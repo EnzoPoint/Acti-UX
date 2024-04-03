@@ -1,0 +1,16 @@
+@mixin flex-container($direction, $should-wrap, $justify-content: flex-start, $align-items: stretch) {
+    display: flex;
+    flex-flow: $direction $should-wrap;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+// shadows
+
+@mixin spread-shadow($color, $alpha, $y: 30px, $blur: 60px) {
+    box-shadow: 0px $y $blur rgba($color: $color, $alpha: $alpha);
+}
+
+@mixin spread-shadow-colored($color, $y: 30px, $blur: 60px) {
+    @include spread-shadow($color, 0.4, $y, $blur);
+}

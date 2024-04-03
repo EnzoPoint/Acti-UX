@@ -1,0 +1,18 @@
+@import "@styles/base/_reset.scss";
+@import "@styles/base/_mixins.scss";
+@import "@styles/base/_typography.scss";
+@import "@styles/abstracts/_colors.module.scss";
+
+.container {
+    gap: 18px;
+    width: 100%;
+}
+
+.row {
+    @include flex-container(row, nowrap, flex-start, flex-start);
+}
+
+.column {
+    padding-top: 18px;
+    @include flex-container(column, nowrap, flex-start, flex-start);
+}

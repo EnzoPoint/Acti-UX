@@ -1,0 +1,154 @@
+
+@import "@styles/base/_reset.scss";
+@import "@styles/base/_mixins.scss";
+@import "@styles/base/_typography.scss";
+@import "@styles/abstracts/_colors.module.scss";
+
+@mixin button-styler ($bg-color, $text-color) {
+    background: $bg-color;
+    color: $text-color;
+}
+
+@mixin make-primary-button($main-color, $main-color-faded) {
+
+    @include button-styler($main-color-faded, $white);
+
+    &.active {
+        @include button-styler($main-color, $white);
+        
+        &:not(.dark):hover {
+            @include spread-shadow-colored($main-color);
+        }
+
+        &.dark:hover, &.dark:active {
+            background: rgba($main-color, 0.8);
+        }
+    }
+}
+
+
+@mixin make-secondary-button($main-color, $main-color-faded, $main-color-background) {
+
+    @include button-styler($main-color-background, $main-color-faded);
+
+    &.active {
+
+        @include button-styler($main-color-background, $main-color);
+
+        &:hover, &:active {
+        
+            &.dark {
+                border: 1px solid $main-color-background;
+            }
+
+            &:not(.dark) {
+                background: $main-color;
+                color: $white;
+                @include spread-shadow-colored($main-color);
+            }
+        }
+
+    }
+
+} 
+
+@mixin make-white-button($main-color, $main-color-faded, $main-color-background) {
+
+    @include button-styler(none, $main-color-faded);
+    border: 1px solid $main-color-background;
+
+    &.active {
+
+        @include button-styler(none, $main-color);
+
+        &:hover, &:active {
+            background: $main-color-background;
+        }
+
+    }
+
+}
+
+.button {
+    @include reset-button;
+    @include flex-container(row, nowrap, center, center);
+    @include button-text;
+    width: fit-content;
+    gap: 10px;
+    border-radius: 8px;
+    padding: 18px;
+
+    &.primary {
+
+        @include make-primary-button($primary, $primary-600);
+
+
+        &.error {
+            @include make-primary-button($error, $error-600);
+        }
+
+        &.dark {
+            @include make-primary-button($secondary, $secondary-600);
+            backdrop-filter: blur(10px);
+        }
+
+    }
+
+    &.secondary {
+
+        @include make-secondary-button($primary, $primary-600, $primary-200);
+
+        &.error {
+            @include make-secondary-button($error, $error-600, $error-200);
+        }
+        
+        &.dark {
+            @include make-secondary-button($white, $white-600, $white-100);
+        }
+    }
+
+    &.white {
+
+        @include make-white-button($white, $white-800, $white-400);
+
+        &.error {
+            @include make-white-button($error, $error-600, $error-200);
+        }
+
+    }
+
+    &.smallAction {
+        width: 40px;
+        height: 40px;
+        border-radius: 40px;
+
+        svg {
+            width: 14px;
+            height: 14px;
+        }
+    }
+
+    &.bigAction {
+        width: 60px;
+        height: 60px;
+        border-radius: 60px;
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &.dark.secondary.smallAction, &.dark.secondary.bigAction {
+
+        background: $black-600;
+
+        &:hover, &:active {
+            background: $black;
+        }
+    }
+
+    &.fullWidth {
+        width: 100%;
+    }
+}

@@ -1,0 +1,70 @@
+@import "@fontsource/montserrat/100.css";
+@import "@fontsource/montserrat/200.css";
+@import "@fontsource/montserrat/300.css";
+@import "@fontsource/montserrat/400.css";
+@import "@fontsource/montserrat/500.css";
+@import "@fontsource/montserrat/600.css";
+@import "@fontsource/montserrat/700.css";
+@import "@fontsource/montserrat/800.css";
+@import "@fontsource/montserrat/900.css";
+
+@import "@styles/abstracts/_colors.module.scss";
+@import "@styles/abstracts/_variables.module.scss";
+
+// rem trick
+
+html {
+	font-size: 62.5%;
+	background: $white;
+	font-family: 'Montserrat', sans-serif;
+	color: $primary;
+}
+
+body {
+	background-color: $white;
+	font-size: 1.6rem;
+}
+
+html, body, div#__next {
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	min-height: 100%;
+	min-width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+
+* {
+	box-sizing: border-box;
+}
+
+@import "@styles/base/_mixins.scss";
+
+div#__next {
+
+	@include flex-container(column, nowrap, center, stretch);
+	
+	@media (max-width: $bp-md) {
+		padding-bottom: 60px;
+    }
+
+	& > main {
+		flex: 1;
+
+		@include flex-container(column, nowrap, flex-start, flex-start);
+    	gap: 32px;
+
+		// @media (min-width: $bp-md) {
+		// 	padding: 0 $side-padding-md 0 calc($side-padding-md + 230px + 16px);
+		// }
+	}
+}

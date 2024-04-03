@@ -1,0 +1,53 @@
+@import "@styles/base/_reset.scss";
+@import "@styles/base/_mixins.scss";
+@import "@styles/base/_typography.scss";
+@import "@styles/abstracts/_colors.module.scss";
+
+.header {
+    @include flex-container(row, nowrap, center, center);
+    width: 100%;
+
+    .container {
+        @include flex-container(column, nowrap, space-evenly, center);
+        background: linear-gradient(180deg, rgb(95, 14, 175) 0%, rgba(49.12, 18.16, 239.29, 0.66) 100%);
+        border-radius: 50px;
+        min-height: 94vh;
+        margin-top: 10px;
+        width: 96vw;
+    }
+}
+
+.title {
+    padding-left: 8vw;
+    margin: 0 auto;
+    color: $white;
+    font-size: 82px;
+    line-height: normal;
+    text-align: center;
+}
+
+.descr {
+    width: calc(100% - 250px) !important;
+    padding-left: 8vw !important;
+    color: $white;
+    @include text-xl-regular;
+    text-align: center;
+}
+
+.group {
+    padding-left: 16vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around;
+    grid-row-gap: 16px;    
+
+    .btn {
+        width: fit-content;
+        @include flex-container(row, nowrap, center, center);
+        background: $white;
+        border-radius: 16px;
+        color: $black;
+        @include text-md-semibold;
+        cursor: pointer;
+    }
+}

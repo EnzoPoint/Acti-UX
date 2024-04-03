@@ -1,0 +1,21 @@
+@import "@styles/base/_reset.scss";
+@import "@styles/base/_mixins.scss";
+@import "@styles/base/_typography.scss";
+@import "@styles/abstracts/_colors.module.scss";
+@import "@styles/abstracts/_variables.module.scss";
+
+
+.navBar {
+    position: sticky;
+    border-radius: 20px;
+    box-shadow: 2px 1px 15px $white-200;
+    background-color: white;
+    @include flex-container(column, nowrap, center, center);
+    padding: 50px 0;
+    width: 12vw;
+
+    ul {
+        @include reset-list;
+        width: 100%;  
+    }
+}

@@ -1,0 +1,62 @@
+@import "@styles/base/_mixins.scss";
+@import "@styles/base/_typography.scss";
+@import "@styles/abstracts/_colors.module.scss";
+@import "@styles/abstracts/_variables.module.scss";
+
+.navItem {
+
+    cursor: pointer;
+    @include flex-container(row, nowrap, flex-start, center);
+    gap: 16px;
+
+    .iconContainer {
+
+        @include flex-container(column, nowrap, center, center);
+
+        width: 60px;
+        height: 60px;
+
+    }
+
+    svg, span {
+        color: $primary;
+    }
+
+    span {
+        @include text-sm-semibold;
+        display: none;
+    }
+
+    &.current {
+        svg, span {
+            color: $primary;
+        }
+    }
+
+    @media (min-width: $bp-md) {
+
+        &.current {
+            background: $primary-100;
+        }
+
+        width: 100%;
+        @include flex-container(column, nowrap, flex-start, center);
+
+        .currentIndicator {
+            display: none;
+        }
+
+        .iconContainer {
+            width: fit-content;
+            height: fit-content;
+        }
+
+        span {
+            display: initial;
+        }
+
+        padding: 16px;
+        border-radius: 8px;
+        
+    }
+}

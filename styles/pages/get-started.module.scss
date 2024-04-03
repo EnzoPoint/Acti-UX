@@ -1,0 +1,26 @@
+@import "@styles/base/_reset.scss";
+@import "@styles/base/_mixins.scss";
+@import "@styles/base/_typography.scss";
+@import "@styles/abstracts/_colors.module.scss";
+@import "@styles/abstracts/_variables.module.scss";
+
+#main {
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.container {
+    margin-top: 10px;
+    background-color: $primary;
+    border-radius: 6px;
+    height: 964px;
+    width: 90vw;;
+}
+
+.space {
+    margin-top: 32px;
+    width: 50%;
+    align-self: center;
+    border: 2px solid $primary;
+    border-radius: 8px;
+}

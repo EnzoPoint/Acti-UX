@@ -1,0 +1,47 @@
+@import "@styles/base/_mixins.scss";
+@import "@styles/base/_typography.scss";
+@import "@styles/abstracts/_colors.module.scss";
+@import "@styles/abstracts/_variables.module.scss";
+
+#header {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding: 0 $side-padding-md;
+
+    @include flex-container(row, nowrap, space-between, center);
+
+    div {
+        @include flex-container(row, nowrap, flex-start, center);
+        gap: 10px;
+
+        h1 {
+            @include typo-maker($h3-font-size, $font-weight-bold, $main-font);
+        }
+
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    @media (max-width: $bp-sm) {
+        height: 50px;
+        padding: 0 $side-padding-sm;
+
+        div {
+
+            h1 {
+                @include typo-maker($text-md-font-size, $font-weight-bold, $main-font);
+            }
+    
+            img {
+                width: 20px;
+                height: 20px;
+            }
+
+        }
+    }
+}
