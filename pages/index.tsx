@@ -3,24 +3,11 @@ import { useEffect, useState } from 'react'
 import MainPage from '@components/main-page'
 import TemplateSection from '@components/template-section'
 import { getAllArticleWithCategories } from '@lib/sanity.services'
-import category from '../sanity/schemas/category'
+import Footer from '@components/layout/footer'
 
 const Home = () => {     
 
 	const [articlesByCategory, setArticlesByCategory] = useState<any>({});
-
-	const [showMouseImage, setShowMouseImage] = useState(false);
-	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  
-	const handleMouseMove = (event: any) => {
-		setMousePosition({ x: event.clientX, y: event.clientY });
-	};
-
-	const handleParagraphClick = () => {
-		if(showMouseImage) setShowMouseImage(false);
-		setShowMouseImage(true);
-	};
-
 
 	useEffect(() => {
 		getAllArticleWithCategories().then((articles: any) => {
@@ -37,14 +24,7 @@ const Home = () => {
 			setArticlesByCategory(groupedByCategory);
 		});
 
-		if (showMouseImage) {
-			window.addEventListener('mousemove', handleMouseMove);
-		}
-	
-		return () => {
-			window.removeEventListener('mousemove', handleMouseMove);
-		};
-	}, [0, showMouseImage]); 
+	}, [0]);
 
 	let category = ["Culture", "Outils", "Design Thinking"];
 
@@ -109,21 +89,7 @@ const Home = () => {
 					section_title="Ressources"
 				/>
 
-				<div className={styles.footer} onClick={handleParagraphClick}>
-
-					<p className={styles.copyright}>
-						© TEAM BG -- Dispeloid -- EnzoPoint -- Mathy -- Gui -- 2024
-					</p>
-					{showMouseImage && (
-						<img
-							src="assets/easter.jpeg" 
-							className={styles.mouseImage}
-							alt="Easter egg"
-							style={{ left: mousePosition.x, top: mousePosition.y }}
-						/>
-					)}
-				</div>
-
+				<Footer />
 			</main>
 		</>
 		

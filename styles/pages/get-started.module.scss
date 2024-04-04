@@ -7,6 +7,10 @@
 #main {
     width: 100%;
     overflow-y: scroll;
+
+    section {
+        color: $black;
+    }
 }
 
 .container {

@@ -4,7 +4,6 @@ import { SessionProvider } from 'next-auth/react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Header from '@components/layout/header'
-import NavBar from '@components/layout/nav-bar'
 
 const App = ({ Component, pageProps }: AppProps) => {
 

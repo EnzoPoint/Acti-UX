@@ -9,6 +9,7 @@ import sanityClient from '@lib/sanity.client';
 import urlBuilder from '@sanity/image-url'
 import { ImageComponentProps } from '@lib/types';
 import {getImageDimensions} from '@sanity/asset-utils'
+import Footer from "@components/layout/footer";
 
 const ArticlePage = () => {
 	const [postData, setPost] = useState<PostData | null>(null);
@@ -73,6 +74,8 @@ const ArticlePage = () => {
 					components={components}
 				/>
 			</article>
+
+			<Footer />
 		</main>
 	);
 };

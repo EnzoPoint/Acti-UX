@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "predeploy" : "npm run build",
-    "deploy" : "gh-pages -d build"
+    "deploy" : "gh-pages -d public"
   },
   "dependencies": {
     "@fontsource/josefin-sans": "^5.0.18",

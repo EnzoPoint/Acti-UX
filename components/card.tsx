@@ -38,10 +38,10 @@ const Card = (
     }      
     
     return ( 
-        <Link className={getClassNames()} href={`/article/${slug}`} passHref> 
+        <Link className={getClassNames()} href={slug !== undefined ? `/article/${slug}` : `#${title}`} passHref>
             {linkImage && <img className={styles.image} src={urlFor(linkImage).url()} alt={title || 'Image'} />}
             <div className={styles.texte}>
-                <h2>{title}</h2>
+                <h3>{title}</h3>
                 <p>{description}</p>
             </div>
         </Link>

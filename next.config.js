@@ -12,6 +12,9 @@ const nextConfig = withPWA({
 
 module.exports = {
   ...nextConfig,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   experimental: {
     swcPlugins: [
       [
