@@ -23,7 +23,7 @@ const GetStarted = () => {
 					section_title="1987 ?"
 					section_description={`Le design thinking trouve ses racines dans les années 1960-1970, grâce aux travaux d'une première génération de chercheurs qui se sont attelés à comprendre et à décrire l'activité des designers, jetant ainsi les bases d'un nouveau domaine de recherche : la recherche en design. Herbert Simon, un éminent chercheur en sciences cognitives et lauréat du Prix Nobel d'économie en 1978, est largement crédité pour avoir donné naissance à ce concept. Dans son ouvrage intitulé \"Les Sciences de l'artificiel", Simon définit le design comme une manière de penser, se distinguant de ceux pour qui le design se résume essentiellement à la création d'objets physiques. Selon lui, le travail des designers est principalement abstrait, consistant à résoudre des problèmes complexes, terme emprunté à un autre grand théoricien du design, Horst Rittel.`}
 					direction='column'
-					image="/assets/test_img.png"
+					image="/assets/get-started/1.png"
 				/>
 
 				<hr className={styles.space} />
@@ -33,7 +33,7 @@ const GetStarted = () => {
 					section_title="Le Design Thinking ?"
 					section_description={`Le Design Thinking est une approche créative et centrée sur l'utilisateur pour résoudre les problèmes et stimuler l'innovation. Cette approche met l'accent sur la compréhension profonde des besoins des utilisateurs, la génération d'idées créatives, la création de prototypes et le test itératif. Le Design Thinking favorise l'empathie, la collaboration multidisciplinaire et l'expérimentation pour développer des solutions qui répondent véritablement aux besoins des utilisateurs. Il s’agit donc d’une méthode d’intelligence collective encourage également à remettre en question les hypothèses, à repenser les problèmes de manière holistique et à adopter une approche itérative pour parvenir à des résultats efficaces.`}
 					direction='column'
-					image="/assets/test_img.png"
+					image="/assets/get-started/2.png"
 
 				/>
 				<hr className={styles.space} />
@@ -50,7 +50,7 @@ const GetStarted = () => {
 					
 					L’impact dans divers domaines : Les projets d'IDEO ont eu un impact significatif dans une variété de domaines, notamment les produits de consommation, les services, les espaces physiques et numériques, la santé, l'éducation, etc. Leur approche centrée sur l'utilisateur a permis de créer des solutions innovantes pour répondre à des besoins réels.`}
 					direction='column'
-					image="/assets/test_img.png"
+					image="/assets/get-started/3.png"
 
 				/>
 				<hr className={styles.space} />
@@ -73,7 +73,7 @@ const GetStarted = () => {
 					L'accent est mis sur la rationalisation, la prise de décision et la transformation des idées brutes en solutions concrètes et réalisables.
 					 `}
 					direction='column'
-					image="/assets/test_img.png"
+					image="/assets/get-started/4.png"
 
 				/>
 				<hr className={styles.space} />
