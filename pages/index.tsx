@@ -82,13 +82,17 @@ const Home = () => {
 					  );		
 					}
 				)}
-				
+							
 				<TemplateSection
 					key="Ressources" 
 					id="Ressources"
 					section_title="Ressources"
+					card_slug={["1.pdf", "2.pdf", "3.pdf", "4.pdf"]}
+					card_image={["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg"]}
+					card_type="small"
+					card_title={["Le Guide", "Kit UX 1", "Kit UX 2", "Kit UX 3"]}
+					card_contenu={["Le guide complet pour débuter en UX", "Le kit UX pour les débutants", "Le kit UX pour les intermédiaires", "Le kit UX pour les experts"]}
 				/>
-
 				<Footer />
 			</main>
 		</>

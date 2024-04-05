@@ -10,7 +10,7 @@ const NavBar = () => {
 
     const navItems: NavItemType[] = [
         {
-            icon: '/assets/book.svg',
+            icon: '/assets/home.svg',
             name: "Home",
             path: "/#home",
         },
@@ -33,7 +33,7 @@ const NavBar = () => {
             icon: '/assets/ressources.svg',
             name: "Ressources",
             path: '/#Ressources',
-        },
+        }
     ]
 
     // state

@@ -2,6 +2,7 @@
 @import "@styles/base/_mixins.scss";
 @import "@styles/base/_typography.scss";
 @import "@styles/abstracts/_colors.module.scss";
+@import "@styles/abstracts/_variables.module.scss";
 
 .container {
     gap: 18px;
@@ -15,4 +16,11 @@
 .column {
     padding-top: 18px;
     @include flex-container(column, nowrap, flex-start, flex-start);
+}
+
+@media screen and (max-width: $bp-md) {
+    .row {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
 }

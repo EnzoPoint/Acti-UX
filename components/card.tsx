@@ -37,14 +37,23 @@ const Card = (
         return builder.image(source)
     }      
     
-    return ( 
+    const isPdf = slug?.includes('.pdf');
+
+    return isPdf ? (
+        <a href={`/assets/${slug}`} target="_blank" rel="noopener noreferrer" className={getClassNames()}>
+            <div className={styles.texte}>
+                <h3>{title}</h3>
+                <p>{description}</p>
+            </div>
+        </a>
+    ) : (
         <Link className={getClassNames()} href={slug !== undefined ? `/article/${slug}` : `#${title}`} passHref>
             {linkImage && <img className={styles.image} src={urlFor(linkImage).url()} alt={title || 'Image'} />}
             <div className={styles.texte}>
                 <h3>{title}</h3>
                 <p>{description}</p>
             </div>
-        </Link>
-    )
+        </Link> 
+    );
 }
 export default Card;

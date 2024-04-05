@@ -36,12 +36,10 @@ const NavItem = (
                     : <></>
                 }
                 { item.path ? 
-                    <a href={item.path[0]} target={item.path[1]}>
                         <span>{item.name}</span>
-                    </a>
                     : 
                     <span>{item.name}</span>
-                }        
+                }    
         </li>
     )
 }

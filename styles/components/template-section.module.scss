@@ -28,3 +28,15 @@
     padding-right: 30px;
     border-radius: 8px;
 }
+
+@media screen and (max-width: $bp-md) {
+    .section {
+        padding-left: 4%;
+    }
+
+    .img {
+        width: 100%;
+        padding-right: 0;
+    }
+    
+}
