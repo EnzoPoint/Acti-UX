@@ -7,14 +7,22 @@
 #main {
     width: 100%;
     overflow-y: scroll;
+
+    @media screen and (max-width: $bp-md) {
+        padding: 0;
+    }
 }
 
 .article {
     @include flex-container(column, nowrap, center, flex-start);
     padding-left: 20%;
     width: calc(100% - 25px);
-
     color: $black;
+
+    @media screen and (max-width: $bp-md) {
+        padding-left: 4%;
+    }
+    
 
     p {
         @include text-md-regular; 
@@ -27,21 +35,53 @@
     h1 {
         @include header-1-bold;
         margin-bottom: 1rem;
+
+        @media screen and (max-width: $bp-md) {
+            font-size: 2.5rem;
+        }
+
+        @media screen and (max-width: $bp-sm) {
+            font-size: 2rem;
+        }
     }
   
     h2 {
         @include header-2-bold;
         margin-bottom: 1rem;
+
+        @media screen and (max-width: $bp-md) {
+            font-size: 2rem;
+        }
+
+        @media screen and (max-width: $bp-sm) {
+            font-size: 1.5rem;
+        }
     }
   
     h3 {
         @include header-3-bold;
         margin-bottom: 1rem;
+
+        @media screen and (max-width: $bp-md) {
+            font-size: 1.5rem;
+        }
+
+        @media screen and (max-width: $bp-sm) {
+            font-size: 1.25rem;
+        }
     }
   
     h4 {
         @include header-4-bold;
         margin-bottom: 1rem;
+
+        @media screen and (max-width: $bp-md) {
+            font-size: 1.25rem;
+        }
+
+        @media screen and (max-width: $bp-sm) {
+            font-size: 1rem;
+        }
     }
   
     a {
