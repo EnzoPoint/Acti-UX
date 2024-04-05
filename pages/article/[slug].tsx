@@ -24,7 +24,7 @@ const ArticlePage = () => {
 		}
 	}, [slug]); 
 
-	if (!postData) return <div>EH ATTENDS BATARD...</div>;
+	if (!postData) return <div>Patience mon loulou ça arrive...</div>;
 
 	const imageComponent = ({value, isInline}: ImageComponentProps) => {
 	const {width, height} = getImageDimensions(value)

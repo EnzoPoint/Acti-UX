@@ -90,8 +90,8 @@ const Home = () => {
 					card_slug={["1.pdf", "2.pdf", "3.pdf", "4.pdf"]}
 					card_image={["image1.jpg", "image2.jpg", "image3.jpg", "image4.jpg"]}
 					card_type="small"
-					card_title={["Le Guide", "Kit UX 1", "Kit UX 2", "Kit UX 3"]}
-					card_contenu={["Le guide complet pour débuter en UX", "Le kit UX pour les débutants", "Le kit UX pour les intermédiaires", "Le kit UX pour les experts"]}
+					card_title={["Le Guide", "Le QQQOCP", "La méthode", "Empaty Map"]}
+					card_contenu={["Le guide complet pour débuter en UX", "Le fameux Quoi, Qui, Ou, Quand, Comment, Pourquoi ?", "Étape majeur du Design Thinking", "Le seul et l'unique l'Empaty Map !'"]}
 				/>
 				<Footer />
 			</main>

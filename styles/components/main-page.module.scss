@@ -41,6 +41,10 @@
     justify-content: space-around;
     grid-row-gap: 16px;    
 
+    @media screen and (max-width: 768px) {
+        padding-left: 4vw;
+    }
+
     .btn {
         width: fit-content;
         @include flex-container(row, nowrap, center, center);

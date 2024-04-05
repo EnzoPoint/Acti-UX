@@ -4,7 +4,7 @@
 @import "@styles/abstracts/_colors.module.scss";
 @import "@styles/abstracts/_variables.module.scss";
 
-.section{
+.section {
     @include flex-container(row, nowrap, center, center);
     padding-left: 20%;
     width: 100%;
@@ -30,12 +30,14 @@
 }
 
 @media screen and (max-width: $bp-md) {
+
     .section {
         padding-left: 4%;
+        display: flex;
+        @include flex-container(column, nowrap, flex-start, flex-start);
     }
 
     .img {
-        width: 100%;
         padding-right: 0;
     }
     
